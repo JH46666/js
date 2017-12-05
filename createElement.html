@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+
+	</title>
+	<script type="text/javascript">
+		/**
+		 * 新增 ul 元素及 100 个 li
+		 * 禁止使用 innerHTML
+		 */
+		 
+		 var body = document.body;
+
+		 var ul = document.createElement('ul');
+		 
+		 var frag =document.createDocumentFragment();
+		 
+		 
+		 for(var i = 0 ,len = 100;i<len;i++){
+		     
+		     var li = document.createElement('li')
+		     var liText = document.createTextNode('i+1');
+		     
+		     li.appendChild(liText);    
+		     
+		     frag.appendChild(li);
+		     
+		 }
+		 
+		 ul.appendChild(frag);
+		 
+		body.appendChild(ul);
+
+
+
+		// var h2 = document.createElement('h2');
+		// var h2Text = document.createTextNode('os 列表');
+		
+		// h2.appendChild(h2Text);
+		// console.log(h2);
+
+		// document.body.appendChild(h2); 
+
+			//   var body =  document.body;
+			//   var pElement = document.createElement("p");
+			//   var messageNode = document.createTextNode('message');
+			//   pElement.appendChild(messageNode);
+
+			// body.appendChild(messageNode);
+
+
+		//创建textNode
+		// var txt=document.body.createTextNode("asdf");
+		// //创建objectNode
+		// var p=document.body.createElement("p");
+		// //加文本以子节点形式加入到P元素中
+		// p.appendChild(txt);
+		// //将上面创建的P元素加入到BODY的尾部
+		// document.body.appendChild(p); 
+	
+	</script>
+</head>
+<body>
+ 
+
+</body>
+</html>

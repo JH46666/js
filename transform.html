@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 100px auto;
+        }
+
+        li {
+            height: 50px;
+        }
+
+        .html,
+        .ps,
+        .js {
+            position: relative;
+            width: 500px;
+            height: 2px;
+            background: #ccc;
+        }
+
+        .html-content:hover .html-bar,
+        .ps-content:hover .ps-bar,
+        .js-content:hover .js-bar {
+            animation: progress 1s ease-out 1;
+        }
+
+        .html-bar,
+        .ps-bar,
+        .js-bar {
+            position: absolute;
+            height: 2px;
+            background: blue;
+            left: 0;
+            top: 0;
+        }
+
+        .html-bar {
+            width: 70%;
+        }
+
+        .ps-bar {
+            width: 30%;
+        }
+
+        .js-bar {
+            width: 50%;
+        }
+
+
+
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="html-content">
+            <div class=" html ">
+                <div class="html-bar "></div>
+            </div>
+        </li>
+        <li class="ps-content ">
+            <div class="ps ">
+                <div class="ps-bar "></div>
+            </div>
+        </li>
+        <li class="js-content ">
+            <div class="js ">
+                <div class="js-bar "></div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

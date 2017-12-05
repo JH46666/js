@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历 DOM</title>
+    <script type="text/javascript">
+       
+        window.onload = function(){
+                 /**
+                 * 遍历函数，注意递归以及回调函数
+                 */
+                
+                function traversal(dom, callback) {
+                    var len = dom.length;
+                    var i = 0;
+                    var d = null;
+
+                    for ( ; i < len; i++) {
+                        d = dom[i];
+
+                        callback(d);
+
+                        if (d.children) {
+                            traversal(d.children, callback);
+                        }
+                    }
+                }
+
+                /**
+                 * 做了个 map
+                 * 用好 map 可以省掉 if 条件语句
+                 * 大家想想，如果以后多了一种 node 节点，是这种 map 容易维护，还是 if 条件语句容易维护？
+                 */
+                var map = {
+                    ul: ' parent',
+                    li: ' child'
+                };
+
+                traversal(document.querySelector('ul').children, function(node) {
+                    node.className = node.className + ' ' + map[node.nodeName.toLowerCase()];
+                });
+
+
+
+
+                }
+        
+    </script>
+    <style>
+        .parent {
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        .child {
+            background-color: #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li class="item">1</li>
+        <li class="item">2
+            <ul class="list">
+                <li class="item">2.1</li>
+                <li class="item">2.2
+                    <ul class="list">
+                        <li class="item">2.2.1</li>
+                        <li class="item">2.2.2</li>
+                    </ul>
+                </li>
+                <li class="item">2.3</li>
+            </ul>
+        </li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+    </ul>
+</body>
+</html>

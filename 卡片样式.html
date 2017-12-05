@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*
+			* 题目要求：
+			* 1、需要设置卡片图片父元素内容超过时隐藏，上面圆角值为5px，底部外边距为5px
+			* 2、需要设置卡片标题文字行高为30px, 字体大小为16px，单行超过使用省略
+			*/
+
+			.tour-item {
+			    width: 240px;
+			    padding: 5px;
+			    border: 1px solid #ccc;
+			    display: block;
+			    border-radius: 5px;
+			    color: #333;
+			    text-decoration: none;
+			}
+
+			.tour-item:hover {
+			    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+			}
+
+			.tour-item .tour-img-wrap {
+			   
+			    
+			    overflow:hidden;
+			    border-top-left-radius:5px;
+			    border-top-right-radius:5px;
+			    margin:0 0 5px 0;
+			    /* 设置内容超过隐藏，左上角和右上角圆角及下边距 */
+			}
+
+			.tour-item .tour-img {
+			    width: 240px;
+			    vertical-align: middle;
+			    transition: all .3s;
+			}
+
+			.tour-item .tour-img-wrap:hover .tour-img {
+			    transform: scale(1.1);
+			}
+
+			.tour-item .item-tt {
+			    margin: 0;
+			    font-weight: normal;
+			    line-height:30px;
+			    font-size:16px;
+			    white-space: nowrap;
+			    overflow:hidden;
+			    text-overflow:ellipsis;
+			    /* 设置行高，文字大小，文字超过省略号显示 */
+			}
+
+			.tour-item .item-tt:hover {
+			    color: #188eee;
+			}
+	</style>
+</head>
+<body>
+	<a class="tour-item" href="#">
+    <div class="tour-img-wrap">
+        <img class="tour-img" src="http://coding.imweb.io/img/img-style.png" alt="美化图片样式">
+    </div>
+    <h3 class="item-tt" title="“华丽的冒险”之美国西部游&mdash;&mdash;day 4">“华丽的冒险”之美国西部游&mdash;&mdash;day 4</h3>
+	</a>
+</body>
+</html>

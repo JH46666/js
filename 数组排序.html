@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<script type="text/javascript">
+		// var aPerson = ['person1', 'person2', 'person3', 'person4', 'person5', 'person6'];
+
+		// var aP3 = aPerson.slice(1, 4);
+
+		// console.log(aPerson);
+		// console.log(aP3);
+
+
+		// var aPerson = ['person1', 'person2', 'person3', 'person4', 'person5', 'person6'];
+
+		// var aP3 = aPerson.splice(1, 3);
+
+		// console.log(aPerson); // ["person1", "person5", "person6"]
+		// console.log(aP3);
+
+
+
+		// var aPerson1 = ['person1', 'person2', 'person3', 'person4', 'person5', 'person6'];
+		// var aPerson2 = ['person7', 'person8', 'person9'];
+  //       var aPerson3 = aPerson1.concat(aPerson2);
+  //       console.log(aPerson3); 
+
+  //       var aHeight = ['170', '165', '178', '183', '168', '175', '173'];
+
+  //       aHeight.reverse();
+		// console.log(aHeight); // ["173", "175", "168", "183", "178", "165", "170"]           
+
+		// aHeight.sort();
+		// console.log(aHeight); // ["165", "168", "170", "173", "175", "178", "183"]
+		//                       // 
+		// aHeight.sort(function(a, b){
+		//     return b - a;
+		// });
+		// console.log(aHeight); // ["183", "178", "175", "173", "170", "168", "165"]
+		// // 这样我们就可以使用该随机生成浮点数与0.5大小进行比较，那样结果可能大于或小于0，最后就得到了我们的随机排序。
+
+		// // 第一次运行
+		// aHeight.sort(function(){
+		//     return 0.5 - Math.random();
+		// });
+		// console.log(aHeight); // ["183", "168", "175", "173", "170", "165", "178"]
+
+		// // 第二次运行
+		// aHeight.sort(function(){
+		//     return 0.5 - Math.random();
+		// });
+		// console.log(aHeight); // ["170", "183", "175", "168", "173", "165", "178"]
+		// // 因为是随机的，所以每次运行都会不一样，我们可以多运行几次试试。
+		var aColor = ['yellow', 'black', 'white', 'white', 'yellow', 'yellow'];
+		var aAge = [19, 30, 25, 37, 18, 35];
+
+		var aTest = aAge.every(
+			function(item, index){
+				return item > 20;
+			}
+		)
+		console.log(aTest);
+
+
+		var ageTest2 = aAge.some(function(item, index){
+		    return item > 32;
+		})
+
+		console.log(ageTest2); // true
+
+
+
+
+		var aYellow = aColor.filter(function(item, index) {
+    		return item === 'yellow';
+		})
+
+		console.log(aYellow); // ["yellow", "yellow", "yellow"];
+		var aPerson = ['person1', 'person2', 'person3', 'person4', 'person5', 'person6']
+
+		aPerson.forEach(function(item, index) {
+		    console.log(item + '领取了 200 元红包')
+		})
+
+
+		// 先构造一份工资数据
+		var aSalary = [8000, 7000, 1500, 9000, 22000];
+
+		var aNewSalary = aSalary.map(function(item, index) {
+		    return item + 5000;
+		})
+
+		console.log(aNewSalary); // [13000, 12000, 6500, 14000, 27000]
+	</script>
+</head>
+<body>
+		
+</body>
+</html>

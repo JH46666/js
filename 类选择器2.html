@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+	<style type="text/css">
+		/* 选中 title 属性链接 */
+		a[title] {}
+
+		/* 选中新窗口打开的链接 */
+		a[target="_blank"] {
+			color:gray
+		}
+			
+		a[href$=".png"]{
+			color: red
+		}
+
+		a[href^="http://"]{
+			color: green
+		}
+		.box {
+			 height: 50vh; /* 视窗高度的50% */
+			 width: 25vw; /* 视窗宽度的25% */
+			 background: red;
+			}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<a href="https://ke.qq.com" target="_blank">腾讯课堂</a>
+	<a href="css-basic.pdf" >CSS学习文档</a>
+	<a href="css.png" >CSS 脑图</a>
+	<a href="http://imweb.io" title=“IMWeb”>IMWeb学院</a>
+</body>
+</html>

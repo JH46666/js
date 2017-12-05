@@ -1,0 +1,100 @@
+/*
+* 题目要求：
+* 1、当屏幕大于或等于768px时，嘉宾列表元素的弹性盒元素为水平显示（flex-direction）
+* 2、当屏幕大于或等于768px时，嘉宾列表的item元素需设置为块级元素，且宽度为容器的50%
+* 3、当屏幕大于或等于1024px时，嘉宾列表的item元素需设置宽度为容器的25% 
+*/
+
+body {
+    background-color: #fff;
+}
+.section-guest {
+    padding: 20px 0;
+}
+.section-hd {
+    text-align: center;
+    position: relative;
+}
+.section-hd::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #dbdbdb;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.section-hd .hd-tt {
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    padding: 0 15px;
+}
+
+.guest-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 320px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guest-list .guest-item {
+    display: flex;
+    margin: 10px 0;
+    color: #666;
+}
+
+.guest-item .item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.guest-item .item-text {
+    flex: 1;
+}
+
+.guest-item .item-tt {
+    color: #188eee;
+    font-size: 16px;
+}
+.guest-item .item-name {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .guest-list {
+        flex-wrap: wrap;
+        flex-direction:row;
+        /* TODO: 嘉宾列表元素的弹性盒元素为水平显示（flex-direction） */
+    }
+    .guest-list .guest-item {
+        padding: 15px;
+        display:block;
+        width:50%;
+        /* TODO: 嘉宾列表的item元素需设置为块级元素，且宽度为容器的50% */
+    }
+    .guest-list .item-img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .guest-item .item-name,
+    .guest-item .item-tt {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .guest-list .guest-item {
+        width:25%;
+        /* TODO: 嘉宾列表的item元素需设置宽度为容器的25% */
+    }
+}
