@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function announce(){
+			var len = arguments.length;
+			var result = '获得本次大会第一名的共有'+len+ '名分别是';
+		    for (var i = 0; i<len;i++){
+		    		if(i !==0){
+		    			result +='、';
+		    		}
+		    	result +=arguments[i] 
+		    }
+		    result +='.';
+		    return result;
+
+		}
+
+		var resultStr = announce('Tom', 'Jack', 'Mike');
+		console.log(resultStr);
+	</script>
+</head>
+<body>
+</body>
+</html>

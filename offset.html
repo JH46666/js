@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.jb51.net/" />
+<title>offset()函数-脚本之家</title>
+<style type="text/css">
+*{
+  margin:0px;
+  padding:0px;
+}
+.father{
+  border:1px solid black;
+  width:400px;
+  height:300px;
+  padding:10px;
+  margin:50px;
+}
+.children{
+  height:150px;
+  width:200px;
+  margin-left:50px;
+  background-color:green;
+}
+</style>
+<script type="text/javascript" src="https://7.url.cn/edu/jslib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+     a=$(".children").offset();
+     alert("元素的偏移量坐标是："+a.top+"|"+a.left+"");
+   })
+})
+</script>
+</head>
+<body>
+<div class="father">
+  <div class="children"></div>
+</div>
+<button>获取元素的坐标</button>
+</body>
+</html>

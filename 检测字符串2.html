@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	 
+		function count(str) {
+		  var resultObj = {}; // 统计对象
+		  var i = 0;
+		  var strLen = str.length;
+		  for (; i < strLen; i++){
+		    var curChar = str.charAt(i); 
+		    // 如果结果对象存在该字符的属性，则自增，否则置为1
+		    if (resultObj[curChar]) {
+		      resultObj[curChar]++;
+		    } else {
+		      resultObj[curChar] = 1;
+		    }
+		  }
+		  // 返回结果
+		  return resultObj;
+		}
+
+		 count('javaScript');
+
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

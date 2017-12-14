@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function  createPerson(name,age,sex){
+		   return {
+		        name:name,
+		        age:age,
+		        sex:sex,
+		        sayHello:function() {
+				    console.log(this.name+'说hello')
+				}
+		   }
+		    
+		}
+
+
+		var  person1 = createPerson('sjh',23,'man');
+		person1.sayHello();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

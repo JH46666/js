@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+		 * 题目要求：
+		 * 完善函数 `gcd` 的功能。函数 gcd 会计算并返回传入的两个正整数参数之间最大的公约数
+		 * 如 25 和 10 之间最大公约数为 5
+		 */
+		 
+		 
+		 function  gcd(m,n){
+		     // if(num1>num2){
+		     //    var w1 = num1 % num2;
+		     //     if (w1 == 0) {
+		     //     	 console.log(num2);
+		     //     }else{
+		     //       var w3 =	num2 % w1;
+		     //        console.log(w3);
+		     //     }
+		         
+		     // }else{
+		     //    var w2 = num2 % num1;
+		     //     if (w2 == 0) {
+		     //     	 console.log(num1);
+		     //     }else{
+		     //     	var w3 = num1 % w2;
+		     //        console.log(w2);
+		     //     }
+
+		     // }		     
+			  var r = 0;
+			    do{
+			        r = m%n;
+			        m = n;
+			        n = r;
+			    }while(r!==0);
+			    console.log(m) ;
+		     
+		 }
+		gcd(12,24);
+		gcd(30,3); 
+		gcd(111,11);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
